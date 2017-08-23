@@ -1,8 +1,8 @@
 <?php
 
-namespace Thl\Backend;
+namespace Mod\Backend;
 
-use Thl\Foundation\Contracts\AreaResolver;
+use Mod\Foundation\Contracts\AreaResolver;
 use Illuminate\Contracts\Foundation\Application;
 
 class Area implements AreaResolver

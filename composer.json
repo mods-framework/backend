@@ -1,12 +1,12 @@
 {
-    "name": "thl/backend",
-    "description": "The THL Framework.",
-    "keywords": ["framework", "thl"],
+    "name": "mods/backend",
+    "description": "The Mods Framework.",
+    "keywords": ["framework", "mods"],
     "license": "MIT",
     "homepage": "https://thehackerleague.com",
     "support": {
-        "issues": "https://github.com/thl/framework/issues",
-        "source": "https://github.com/thl/framework"
+        "issues": "https://github.com/mods-framework/backend/issues",
+        "source": "https://github.com/mods-framework/backend"
     },
     "authors": [
         {
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Thl\\Backend\\": ""
+            "Mod\\Backend\\": ""
         }
     }
 }
