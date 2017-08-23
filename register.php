@@ -5,7 +5,8 @@ return [
         'name' => 'Backend',
         'type' => 'module',
         'providers' => [
-            Mod\Backend\RouteServiceProvider::class,
+            Mods\Backend\BackendServiceProvider::class,
+            Mods\Backend\RouteServiceProvider::class,
         ],
         'aliases' => [
         ],
@@ -14,7 +15,7 @@ return [
         ],
         'autoload' => [
             'psr-4' => [
-                'Mod\\Backend\\' => realpath(__DIR__.'/src/')
+                'Mods\\Backend\\' => realpath(__DIR__.'/src/')
             ]
         ]
     ]

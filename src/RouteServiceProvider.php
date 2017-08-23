@@ -1,9 +1,9 @@
 <?php
 
-namespace Mod\Backend;
+namespace Mods\Backend;
 
 use Illuminate\Routing\Router;
-use Mod\Support\RouteServiceProvider as ServiceProvider;
+use Mods\Support\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
 {
@@ -14,7 +14,7 @@ class RouteServiceProvider extends ServiceProvider
      *
      * @var string
      */
-    protected $namespace = 'Mod\Backend\Http\Controllers';
+    protected $namespace = 'Mods\Backend\Http\Controllers';
 
     /**
      * Define your route model bindings, pattern filters, etc.
