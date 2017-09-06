@@ -14,7 +14,7 @@ class BackendServiceProvider extends ServiceProvider
     public function boot()
     {
         $this->loadViewsFrom(__DIR__.'/../view', 'backend');
-        $this->loadAssetsFrom(__DIR__.'/../assets', 'backend');
+        $this->loadAssetsFrom(__DIR__.'/../assets', 'backend', 'backend');
     }
 
     /**

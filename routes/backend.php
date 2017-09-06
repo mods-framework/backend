@@ -11,6 +11,6 @@
 |
 */
 
-Route::get('/', [ 'as' => 'home', function () {
+Route::get('/', [ 'as' => 'dashboard', function () {
     return render();
 }]);
