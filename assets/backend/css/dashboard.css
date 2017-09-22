@@ -228,3 +228,12 @@ ul.side-nav.leftside li.active {
     line-height: 3rem;
     padding: 1rem 0;
 }
+
+
+.side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active a {
+    color: rgba(0, 0, 0, .87);
+}
+
+.side-nav.fixed .collapsible-body > ul:not(.collapsible) > li.active a.active {
+    color: #fff;
+}

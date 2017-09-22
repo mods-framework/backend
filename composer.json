@@ -1,7 +1,7 @@
 {
     "name": "mods/backend",
     "description": "The Mods Framework.",
-    "keywords": ["framework", "mods"],
+    "keywords": ["framework", "mods", "admin", "dashboard"],
     "license": "MIT",
     "homepage": "https://thehackerleague.com",
     "support": {
@@ -18,7 +18,7 @@
     },
     "autoload": {
         "psr-4": {
-            "Mod\\Backend\\": "src/"
+            "Mods\\Backend\\": "src/"
         }
     }
 }

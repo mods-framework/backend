@@ -9,7 +9,7 @@
     </head>
     <body>
     	<referenceContainer name="main">
-    		<block class="Mods\Home\Block\Home" name="dashboard" as="dashboard" template="backend::dashboard" />
+    		<block class="Mods\Backend\Block\Dashboard" name="dashboard" as="dashboard" template="backend::dashboard" />
     	</referenceContainer>	
     </body>
 </page>
