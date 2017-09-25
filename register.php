@@ -6,6 +6,7 @@ return [
         'type' => 'module',
         'providers' => [
             Mods\Backend\BackendServiceProvider::class,
+            Mods\Backend\AuthRouteServiceProvider::class,
             Mods\Backend\RouteServiceProvider::class,
         ],
         'aliases' => [

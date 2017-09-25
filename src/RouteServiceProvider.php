@@ -3,7 +3,7 @@
 namespace Mods\Backend;
 
 use Illuminate\Routing\Router;
-use Mods\Support\RouteServiceProvider as ServiceProvider;
+use Mods\Backend\Support\RouteServiceProvider as ServiceProvider;
 
 class RouteServiceProvider extends ServiceProvider
 {
