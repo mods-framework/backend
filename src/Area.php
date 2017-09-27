@@ -20,6 +20,10 @@ class Area implements AreaResolver
         $app['events']->listen('Illuminate\Routing\Events\RouteMatched', function ($event) use ($app) {
             if ($app['router']->is('backend.*')) {
                 $app['area'] = 'backend';
+                $app->singleton(
+                    \Illuminate\Contracts\Debug\ExceptionHandler::class,
+                    \Mods\Backend\Exceptions\Handler::class
+                );
             }
         });
         return false;
