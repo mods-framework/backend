@@ -2,6 +2,7 @@
 
 namespace Mods\Backend\Http\Controllers\Auth;
 
+use Illuminate\Support\Facades\Auth;
 use Mods\Support\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
@@ -35,5 +36,36 @@ class LoginController extends Controller
     public function __construct()
     {
         $this->middleware('backend_guest')->except('logout');
+    }
+
+
+    /**
+     * Show the application's login form.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function showLoginForm()
+    {
+        return render();
+    }
+
+    /**
+     * Get the login username to be used by the controller.
+     *
+     * @return string
+     */
+    public function username()
+    {
+        return 'username';
+    }
+
+    /**
+     * Get the guard to be used during authentication.
+     *
+     * @return \Illuminate\Contracts\Auth\StatefulGuard
+     */
+    protected function guard()
+    {
+        return Auth::guard('backend');
     }
 }

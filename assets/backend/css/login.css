@@ -1,0 +1,33 @@
+.centered {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.login-form {
+  width: 280px;
+}
+
+.brand-logo span {
+  margin:0px;
+  font-size: 4rem;
+}
+.brand-logo span.m {     
+  color:#00bcd4;
+}
+.brand-logo span.o {       
+  color:#69f0ae;
+}
+.brand-logo span.d {       
+  color:#ffff00;
+}
+.brand-logo span.s {       
+  color:#ff9100;
+}
+
+.medium-small {
+    font-size: 0.9rem;
+    margin: 0;
+    padding: 0;
+}
