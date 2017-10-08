@@ -32,6 +32,14 @@ class BackendServiceProvider extends ServiceProvider
         $this->loadViewsFrom(__DIR__.'/../view', 'backend');
         $this->loadAssetsFrom(__DIR__.'/../assets', 'backend', 'backend');
 
+
+        $this->loadTranslationsFrom(__DIR__.'/../lang', 'backend');
+
+        $this->publishes([
+            __DIR__.'/path/to/translations' => resource_path('lang/vendor/courier'),
+        ]);
+
+
         $this->mergeRecursiveConfigFrom(
             __DIR__.'/../config/auth.php', 'auth'
         );

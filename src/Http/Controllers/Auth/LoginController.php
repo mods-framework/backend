@@ -2,8 +2,10 @@
 
 namespace Mods\Backend\Http\Controllers\Auth;
 
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Mods\Support\Http\Controllers\Controller;
+use Illuminate\Validation\ValidationException;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
 
 class LoginController extends Controller
@@ -47,6 +49,19 @@ class LoginController extends Controller
     public function showLoginForm()
     {
         return render();
+    }
+
+    /**
+     * Get the failed login response instance.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\RedirectResponse
+     */
+    protected function sendFailedLoginResponse(Request $request)
+    {
+        throw ValidationException::withMessages([
+            $this->username() => [trans('backend::auth.failed')],
+        ]);
     }
 
     /**
