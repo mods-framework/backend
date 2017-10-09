@@ -51,7 +51,19 @@ class Dashboard extends BaseBlock
                     "data-delay"=>"50", 
                     "data-tooltip"=>"Preview Website", 
                     "class"=>"tooltipped waves-effect waves-block waves-light"
-                ]);       
+                ]);
+
+        $menu->add('Logout', '', route('backend.logout'))
+                ->prepend('<i class="material-icons">settings_power</i> ')
+                ->append('<form id="logout-form" action="'.route('backend.logout').
+                    '" method="POST" style="display: none;">'.csrf_field().'</form>')
+                ->link->attr([
+                    'onclick' => "event.preventDefault();document.getElementById('logout-form').submit();",
+                    "data-position" => "bottom",
+                    "data-delay"=>"50", 
+                    "data-tooltip"=>"Log Out", 
+                    "class"=>"tooltipped waves-effect waves-block waves-light"
+                ]);        
 
         app('events')->fire('backend.sidebar.menu.getTopMenu.before', [
             'menu'  => $menu
