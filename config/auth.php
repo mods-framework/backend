@@ -66,9 +66,9 @@ return [
     */
 
     'passwords' => [
-         'admins' => [
+         'backend' => [
             'provider' => 'admins',
-            'table' => 'password_resets',
+            'table' => 'backend_password_resets',
             'expire' => 60,
         ],
     ],

@@ -1,0 +1,32 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="420" height="106" viewBox="0 0 420 106">
+  <defs>
+    <style>
+      .cls-1, .cls-2, .cls-3, .cls-4 {
+        font-size: 164px;
+        text-anchor: middle;
+        font-family: Calibri;
+        font-weight: 700;
+      }
+ 
+      .cls-1 {
+        fill: #00bcd4;
+      }
+ 
+      .cls-2 {
+        fill: #69f0ae;
+      }
+ 
+      .cls-3 {
+        fill: #ff0;
+      }
+ 
+      .cls-4 {
+        fill: #ff9100;
+      }
+    </style>
+  </defs>
+  <text id="M" class="cls-1" x="61" y="105"><tspan x="61">M</tspan></text>
+  <text id="O" class="cls-2" x="188" y="106"><tspan x="188">O</tspan></text>
+  <text id="D" class="cls-3" x="296" y="106"><tspan x="296">D</tspan></text>
+  <text id="S" class="cls-4" x="386" y="106"><tspan x="386">S</tspan></text>
+</svg>

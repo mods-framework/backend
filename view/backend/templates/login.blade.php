@@ -7,6 +7,17 @@
           <p class="center brand-logo"><span class="m">M</span> <span class="o">o</span> <span class="d">d</span> <span class="s">s</span></p>
         </div>
       </div>
+      @if (session('status'))    
+      <div class="row">
+        <div class="col s12">        
+          <div class="card green">
+              <div class="card-content white-text">
+                <p>{{ session('status') }}</p>
+              </div>
+          </div>        
+        </div>
+      </div>
+      @endif
       <div class="row">
         <div class="input-field col s12">
           <i class="material-icons dp48 prefix">person_outline</i>
@@ -14,7 +25,7 @@
           @if ($errors->has('username')) 
             <label id="username-error" class="invalid" for="username">{{ $errors->first('username') }}</label>
           @endif
-          <label for="username">Username</label>
+          <label for="username">{{ trans('backend::auth.label.username') }}</label>
         </div>
       </div>
       <div class="row">
@@ -24,17 +35,17 @@
           @if ($errors->has('password')) 
             <label id="password-error" class="invalid" for="password">{{ $errors->first('password') }}</label>
           @endif
-          <label for="password"  @if ($errors->has('password')) data-error="{{ $errors->first('password') }}"@endif>Password</label>
+          <label for="password">{{ trans('backend::auth.label.password') }}</label>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-          <button type="submit" class="btn waves-effect waves-light col s12">Login</button>
+          <button type="submit" class="btn waves-effect waves-light col s12">{{ trans('backend::auth.button.login') }}</button>
         </div>
       </div>
       <div class="row">
         <div class="input-field col s12">
-            <p class="medium-small"><a href="{{ route('backend.password.request') }}">Forgot password ?</a></p>
+            <p class="medium-small"><a href="{{ route('backend.password.request') }}">{{ trans('backend::auth.button.forgot_password') }}</a></p>
         </div>          
       </div>
     </form>
