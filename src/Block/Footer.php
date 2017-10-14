@@ -4,7 +4,7 @@ namespace Mods\Backend\Block;
 
 use Mods\View\Block as BaseBlock;
 
-class Dashboard extends BaseBlock
+class Footer extends BaseBlock
 {
-	
+   
 }

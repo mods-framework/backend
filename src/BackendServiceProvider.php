@@ -36,7 +36,7 @@ class BackendServiceProvider extends ServiceProvider
         $this->loadTranslationsFrom(__DIR__.'/../lang', 'backend');
 
         $this->publishes([
-            __DIR__.'/path/to/translations' => resource_path('lang/vendor/courier'),
+           __DIR__.'/../lang' => resource_path('lang/vendor/backend'),
         ]);
 
 
@@ -44,7 +44,7 @@ class BackendServiceProvider extends ServiceProvider
             __DIR__.'/../config/auth.php', 'auth'
         );
 
-        $this->loadMigrationsFrom(__DIR__.'/../migrations');
+        $this->loadMigrationsFrom(__DIR__.'/../database/migrations');
     }
 
     /**

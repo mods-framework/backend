@@ -1,15 +1,11 @@
 <?xml version="1.0"?>
-<page layout="1column" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
     <head>
-       	<title>Dashboard</title>        
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8" />
-        <link src="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"/>
-        <css src="backend/dashboard.css" media="screen,projection"/>
+       	<title>Dashboard</title>
     </head>
     <body>
     	<referenceContainer name="main">
-    		<block class="Mods\Backend\Block\Dashboard" name="dashboard" as="dashboard" template="backend::dashboard" />
-    	</referenceContainer>	
+    		<block class="Mods\Backend\Block\Dashboard" name="dashboard" template="backend::dashboard" />
+    	</referenceContainer>
     </body>
 </page>
