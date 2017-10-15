@@ -5,7 +5,21 @@
     </head>
     <body>
     	<referenceContainer name="main">
-    		<block class="Mods\Backend\Block\Dashboard" name="dashboard" template="backend::dashboard" />
+    		<container name="section-1.wrapper" label="Main Section Content Wrapper" htmlTag="div" htmlClass="section-1">
+                <container name="section-1.wrapper.row" label="Main Section Content Wrapper Row" htmlTag="div" htmlClass="row">
+                    <container name="section-1" label="Main Section Content Container" />
+                </container>    
+            </container>
+            <container name="section-2.wrapper" label="Main Section Content Wrapper" htmlTag="div" htmlClass="section-2">
+                <container name="section-2.wrapper.row" label="Main Section Content Wrapper Row" htmlTag="div" htmlClass="row">
+                    <container name="section-2" label="Main Section Content Container" />
+                </container>    
+            </container>
+            <container name="section-3.wrapper" label="Main Section Content Wrapper" htmlTag="div" htmlClass="section-3">
+                <container name="section-3.wrapper.row" label="Main Section Content Wrapper Row" htmlTag="div" htmlClass="row">
+                    <container name="section-3" label="Main Section Content Container" />
+                </container>    
+            </container>
     	</referenceContainer>
     </body>
 </page>

@@ -52,7 +52,7 @@ class Header extends BaseBlock
 
         $html = $menu->asUl(['class' => 'right']);
 
-        app('events')->fire('admin.sidebar.menu.getTopMenu.after', [
+        app('events')->fire('backend.sidebar.menu.getTopMenu.after', [
             'menu' => $menu,
             'html' => $html,
         ]);

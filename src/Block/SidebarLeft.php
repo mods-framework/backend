@@ -20,18 +20,13 @@ class SidebarLeft extends BaseBlock
         $menu->add('Dashboard', 'Dashboard', ['route'  => 'backend.dashboard'])
                 ->prepend('<i class="material-icons">dashboard</i> ');
 
-        $menu->add('System', 'System')->prepend('<i class="material-icons">settings_system_daydream</i> ');
-        $menu->system->add('Settings', 'Settings', '/settings')->prepend('<i class="material-icons">settings</i> ');        
-        $menu->settings->add('Users', 'Users', '/users')->prepend('<i class="material-icons">supervisor_account</i> ');
-        $menu->system->add('Updates', 'Updates', '/system_update')->prepend('<i class="material-icons">system_update</i> ');
-
         app('events')->fire('backend.sidebar.menu.getSideMenu.before', [
             'menu'  => $menu
         ]);
 
         $html = $this->renderSideMenu($menu);
 
-        app('events')->fire('admin.sidebar.menu.getSideMenu.after', [
+        app('events')->fire('backend.sidebar.menu.getSideMenu.after', [
             'menu' => $menu,
             'html' => $html,
         ]);
