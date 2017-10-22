@@ -13,7 +13,7 @@
     <body>
         <attribute name="class" value="cyan"/>
     	<referenceContainer name="main">
-    		<block class="Mods\Backend\Block\Login" name="login" as="login" template="backend::login" />
+    		<block class="Mods\View\Blocks\EmptyBlock" name="login" as="login" template="backend::login" />
     	</referenceContainer>	
     </body>
 </page>
