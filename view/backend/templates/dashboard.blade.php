@@ -1,14 +1,11 @@
-<div class="col s12 m6 l3">
-    <div class="card">
-        <div class="card-content green white-text">
-            <p class="card-stats-title"><i class="mdi-social-group-add"></i> New Clients</p>
-            <h4 class="card-stats-number">566</h4>
-            <p class="card-stats-compare"><i class="mdi-hardware-keyboard-arrow-up"></i> 15% <span class="green-text text-lighten-5">from yesterday</span> </p>
-        </div>
-        <div class="card-action green darken-2">
-            <div id="clients-bar" class="center-align">
-                <canvas width="227" height="25" style="display: inline-block; width: 227px; height: 25px; vertical-align: top;"></canvas>
-            </div>
-        </div>
+<div class="col col-sm-12 col-md-6 col-lg-3">
+    <div class="card" style="width: 20rem;">
+      <div class="card-body">
+        <h4 class="card-title">Card title</h4>
+        <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="card-link">Card link</a>
+        <a href="#" class="card-link">Another link</a>
+      </div>
     </div>
 </div>

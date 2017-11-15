@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
+    <head>
+       	<remove src="dashboard.js"/>
+    </head>
+    <body>
+    </body>
+</page>
