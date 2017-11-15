@@ -18,7 +18,7 @@ class SidebarLeft extends BaseBlock
         $menu = \Menu::make();
 
         $menu->add('Dashboard', 'Dashboard', ['route'  => 'backend.dashboard'])
-                ->prepend('<i class="material-icons">dashboard</i> ');
+                ->prepend('<span class="oi oi-dashboard"></span>');
 
         app('events')->fire('backend.sidebar.menu.getSideMenu.before', [
             'menu'  => $menu
@@ -37,7 +37,7 @@ class SidebarLeft extends BaseBlock
 
     protected function renderSideMenu($menu)
     {
-        return "<ul{$menu->attributes(['id'=>'open-left-menu', 'class'=>'side-nav fixed leftside'])}>{$this->render($menu ,'ul')}</ul>";
+        return "<ul{$menu->attributes(['class'=>'side-nav leftside'])}>{$this->render($menu ,'ul')}</ul>";
     }
 
     /**
@@ -52,34 +52,27 @@ class SidebarLeft extends BaseBlock
         $items   = '';
         $itemTag = in_array($type, ['ul', 'ol']) ? 'li' : $type;
         foreach ($menu->where('parent', $parent) as $item) {
-            $items .= "<{$itemTag}{$item->attributes()}>";
-            $link =  $arrow = '';
-            if ($item->link) {
-                $item->link->attr(['class' => 'collapsible-header waves-effect waves-cyan']);
-                $attribute = $menu->attributes($item->link->attr());
-                $link = "href=\"{$item->url()}\"";
-            } else {
-                $attribute = 'collapsible-header waves-effect waves-cyan';
-            }
-
-
-            if ($item->hasChildren()) { 
-                $items .= '<ul class="collapsible"><li>';
-                $link = '';
-                $arrow = '<div class="arrow-group right"> 
-                    <i class="material-icons keyboard_arrow_right">keyboard_arrow_right</i> 
-                    <i class="material-icons keyboard_arrow_down">keyboard_arrow_down</i> 
-                </div>';
-            }
-
-            $items .= "<a{$attribute} {$link}>{$item->title} {$arrow} </a>";
 
             if ($item->hasChildren()) {
-                $items .= "<div class='collapsible-body'> <{$type}>";
+                $item->attribute(['class'=>'has-sub']);               
+            }
+
+
+            $items .= "<{$itemTag}{$item->attributes()}>";
+
+            if (!$item->hasChildren()) {
+                $items .= "<a{$menu->attributes($item->link->attr())} href=\"{$item->url()}\">{$item->title}</a>";
+            } else {
+                $classAttr = '';
+                if($item->data('active') === true){
+                    $classAttr = "class=\"active\"";
+                }
+                $items .= "<span {$classAttr}>{$item->title}</span>";
+            }
+            if ($item->hasChildren()) {
+                $items .= "<{$type}>";
                 $items .= $this->render($menu, $type, $item->id);
-                $items .= "</{$type}></div>";
-                $items .= '</li
-                ></ul>';
+                $items .= "</{$type}>";
             }
             $items .= "</{$itemTag}>";
             if ($item->divider) {

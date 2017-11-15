@@ -17,21 +17,21 @@ class Header extends BaseBlock
         $menu = \Menu::make();
 
         $menu->add('Preview', '', '/')
-                ->prepend('<i class="material-icons">open_in_new</i> ')
-                ->attribute(['class' => 'hide-on-med-and-down'])
+                ->prepend('<span class="oi oi-external-link"></span>')
+                ->attribute(['class' => 'nav-item d-none d-xl-block'])
                 ->link->attr([
                     "target" => "_blank",
-                    "data-position" => "bottom",
-                    "data-delay"=>"50", 
-                    "data-tooltip"=>"Preview Website", 
-                    "class"=>"tooltipped waves-effect waves-block waves-light"
+                    "data-toggle" => "tooltip",
+                    "data-placement" => "bottom",
+                    "title"=>"Preview Website",
+                    "class" => "nav-link"
                 ]);
 
         $menu->add('Notification', '', '/')
-                ->prepend('<i class="material-icons">notifications</i> ')
-                ->attribute(['class' => 'hide-on-med-and-down'])
+                ->prepend('<span class="oi oi-bell"></span>')
+                ->attribute(['class' => 'nav-item d-none d-xl-block'])
                 ->link->attr([
-                    "class"=>"waves-effect waves-block waves-light"
+                    "class" => "nav-link"
                 ]);
 
         app('events')->fire('backend.sidebar.menu.getTopMenu.before', [
@@ -39,18 +39,19 @@ class Header extends BaseBlock
         ]);        
 
         $menu->add('Logout', '', route('backend.logout'))
-                ->prepend('<i class="material-icons">settings_power</i> ')
+                ->attribute(['class' => 'nav-item'])
+                ->prepend('<span class="oi oi-account-logout"></span>')
                 ->append('<form id="logout-form" action="'.route('backend.logout').
                     '" method="POST" style="display: none;">'.csrf_field().'</form>')
                 ->link->attr([
                     'onclick' => "event.preventDefault();document.getElementById('logout-form').submit();",
-                    "data-position" => "bottom",
-                    "data-delay"=>"50", 
-                    "data-tooltip"=>"Log Out", 
-                    "class"=>"tooltipped waves-effect waves-block waves-light"
+                    "data-toggle" => "tooltip",
+                    "data-placement" => "bottom",
+                    "title"=>"Log Out",
+                    "class" => "nav-link"
                 ]);        
 
-        $html = $menu->asUl(['class' => 'right']);
+        $html = $menu->asUl(['class' => 'navbar-nav ml-auto']);
 
         app('events')->fire('backend.sidebar.menu.getTopMenu.after', [
             'menu' => $menu,
