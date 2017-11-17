@@ -11,6 +11,7 @@
         <script src="jquery-bootstrap.js" />
     </head>
     <body>
+        <attribute name="class" value="" />
     	<referenceContainer name="main">
     		<block class="Mods\View\Blocks\EmptyBlock" name="login" as="login" template="backend::login" />
     	</referenceContainer>	
