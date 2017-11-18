@@ -1,5 +1,5 @@
 <div class="col col-sm-12 col-md-6 col-lg-3">
-    <div class="card" style="width: 20rem;">
+    <div class="card">
       <div class="card-body">
         <h4 class="card-title">Card title</h4>
         <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
